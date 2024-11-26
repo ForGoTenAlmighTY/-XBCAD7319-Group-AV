@@ -1,0 +1,126 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row gx-1 align-items-center">
+                <div class="col-md-3">
+                    <div class="me-md-2 me-lg-5"><img class="img-fluid " src="/img/image.png"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ms-md-2 ms-lg-5 mt-5 mt-md-0">
+						<h1 class="display-3 fw-bold mb-0">e-Government Service</h1>
+						<p class="lead">Connecting Government Employees to Seamless Solutions for Efficient Service Delivery and Citizen Empowerment!</p>
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services-->
+	<section class="py-5">
+		<div class="container">
+			<div class="row justify-content-center text-center mb-3">
+				<div class="col-lg-8 col-xl-7">
+					<h2 class="display-5 fw-bold">Select Your Department</h2>
+				</div>
+			</div>
+			<div class="row g-4 g-md-5">
+				<div class="col-md-6">
+					<div class="d-flex">
+						<div class="text-primary me-4">
+							<svg class="bi bi-aspect-ratio" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+							</svg>
+						</div>
+						<div>
+							<h5 class="mb-2 mb-lg-3 fw-bold">Department Of Home Affairs</h5>
+							<p>Secure your identity with services like ID applications, birth certificates, and passport renewals.</p>
+							<a class="btn btn-lg btn-primary" asp-page="/Home Affairs/Index">Log In</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="d-flex">
+						<div class="text-primary me-4">
+							<svg class="bi bi-emoji-wink" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276" />
+								<path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z" />
+							</svg>
+						</div>
+						<div>
+							<h5 class="mb-2 mb-lg-3 fw-bold">Department Of Transport</h5>
+							<p>Navigate with ease by renewing your driver’s license.</p>
+							<a class="btn btn-lg btn-primary" asp-page="/Traffic/Index">Log In</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="d-flex">
+						<div class="text-primary me-4">
+							<svg class="bi bi-layout-text-window-reverse" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z"></path>
+								<path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1H2zM1 4v10a1 1 0 0 0 1 1h2V4H1zm4 0v11h9a1 1 0 0 0 1-1V4H5z"></path>
+							</svg>
+						</div>
+						<div>
+							<h5 class="mb-2 mb-lg-3 fw-bold">Department Of Health</h5>
+							<p>Stay covered with medical aid registrations, vaccination scheduling, and health record management.</p>
+							<a class="btn btn-lg btn-primary" asp-page="/Health/Index">Log In</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="d-flex">
+						<div class="text-primary me-4">
+							<svg class="bi bi-clipboard-check" fill="currentColor" height="32" viewbox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207" />
+								<path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+							</svg>
+						</div>
+						<div>
+							<h5 class="mb-2 mb-lg-3 fw-bold">Department Of Social Development</h5>
+							<p>Supporting communities with social grant applications.</p>
+							<a class="btn btn-lg btn-primary" asp-page="/Social Development/Index">Log In</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- About-->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+
+
+</html>

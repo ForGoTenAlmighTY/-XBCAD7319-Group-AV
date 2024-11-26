@@ -1,0 +1,51 @@
+﻿@page
+@model eGovernmernt_Service.Pages.Traffic.ViewAppointmentsModel
+@{
+}
+<div class="container">
+    <partial name="_LoginPartial" />
+</div>
+
+<div class="row">
+    <div class="col-md-4 mx-auto rounded border p-5">
+        <section>
+            <h2 class="text-center mb-3">Update Appointments.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <form id="account" method="post">
+                <div class="mb-3">
+                    <label class="form-label" for="AppointID">Appointment ID:</label>
+                    <input id="AppointID" class="form-control name="AppointID" value="@Model.Record.AppointID" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="DeptService">Department Service:</label>
+                    <input id="DeptService" class="form-controlname=" DeptService" value="@Model.Record.DeptService" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="FullNames">Full Names:</label>
+                    <input id="FullNames" class="form-control name="FullNames" value="@Model.Record.FullNames" readonly />
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-4 col-form-label">Status:</label>
+                    <div class="col-sm-8">
+                        <select id="Status" name="Status" asp-for="Record.Status" class="form-control">
+                            <option value="In Review" selected="@Model.Record.Status == " In Review"">In Review</option>
+                            <option value="Complete" selected="@Model.Record.Status == " Complete"">Complete</option>
+                            <option value="Rejected" selected="@Model.Record.Status == " Rejected"">Rejected</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div class="offset-sm-4 col-sm-4 d-grid">
+                        <button type="submit" asp-page="./Index" class="btn btn-primary">Save Changes</button>
+                        <button asp-page="./Index" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </section>
+    </div>
+
+</div>

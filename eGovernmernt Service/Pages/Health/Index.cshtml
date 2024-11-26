@@ -1,0 +1,127 @@
+﻿@page
+@model eGovernmernt_Service.Pages.Health.IndexModel
+@{
+}
+<partial name="_LoginPartial" />
+<div class="content">
+    <!-- Sale & Revenue Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-chart-line fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Total Applications</p>
+                        <h6 class="mb-0">@Model.healthApplications.Count</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Total Appointments</p>
+
+                        <h6 class="mb-0">@Model.healthAppointments.Count</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sale & Revenue End -->
+    <!-- Recent Sales Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="bg-light text-center rounded p-4">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <h4 class="mb-0">Recent Salse</h4>
+                <form method="post" asp-page-handler="DownloadHealthApplicationsPdf">
+                    <button type="submit" class="btn btn-primary">
+                        Generate PDF Report
+                    </button>
+                </form>
+            </div>
+            <div class="table-responsive">
+                <table class="table text-start align-middle table-bordered table-hover mb-0">
+                    <thead>
+                        <tr class="text-dark">
+                            <th>Application ID</th>
+                            <th>ID Number</th>
+                            <th>Full Names</th>
+                            <th>Home Address</th>
+                            <th>Contact Number</th>
+                            <th>Medical History</th>
+                            <th>Proof Of Residence</th>
+                            <th>ID Copy</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var application in Model.healthApplications)
+                        {
+                            <tr>
+                                <td>@application.AppID</td>
+                                <td>@application.IDnumber</td>
+                                <td>@application.FullNames</td>
+                                <td>@application.HomeAddress</td>
+                                <td>@application.ContactNumber</td>
+                                <td>@application.MedHistory</td>
+                                <td>@application.ProofOfRes</td>
+                                <td>@application.IDcopy</td>
+                                <td>@application.Status</td>
+                                <td><a class="btn btn-sm btn-primary"asp-page="./ViewApplications" asp-route-id="@application.AppID">Detail</a></td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Recent Sales End -->
+    <!-- Recent Sales Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="bg-light text-center rounded p-4">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <h4 class="mb-0">Recent Appointments</h4>
+            </div>
+            <div class="table-responsive">
+                <table class="table text-start align-middle table-bordered table-hover mb-0">
+                    <thead>
+                        <tr class="text-dark">
+                            <th>Appointment ID</th>
+                            <th>ID number</th>
+                            <th>Full Names</th>
+                            <th>Department Service</th>
+                            <th>Appointment Date and Time</th>
+                            <th>Contact Number</th>
+                            <th>Department Location</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var appointment in Model.healthAppointments)
+                        {
+                            <tr>
+                                <td>@appointment.AppointID</td>
+                                <td>@appointment.IDnumber</td>
+                                <td>@appointment.FullNames</td>
+                                <td>@appointment.DeptService</td>
+                                <td>@appointment.AppointDateTime</td>
+                                <td>@appointment.ContactNumber</td>
+                                <td>@appointment.DeptLocation</td>
+                                <td>@appointment.Status</td>
+                                <td><a class="btn btn-sm btn-primary" asp-page="./ViewAppointments" asp-route-id="@appointment.AppID">Detail</a></td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Recent Sales End -->
+</div>

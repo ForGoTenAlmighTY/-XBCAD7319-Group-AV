@@ -1,0 +1,68 @@
+﻿@page
+@model eGovernmernt_Service.Pages.Traffic.ViewApplicationsModel
+@{
+}
+<div class="row">
+    <div class="col-md-4 mx-auto rounded border p-5">
+        <section>
+            <h2 class="text-center mb-3">Update Applications.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <form id="account" method="post">
+                <div class="mb-3">
+                    <label class="form-label" for="AppID">Application ID:</label>
+                    <input id="AppID" class="form-control" name="AppID" value="@Model.Record.AppID" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="FullNames">Full Names:</label>
+                    <input id="FullNames" class="form-control" name="FullNames" value="@Model.Record.FullNames" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ContactNumber">Contact Number:</label>
+                    <input id="ContactNumber" class="form-control" name="ContactNumber" value="@Model.Record.ContactNumber" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="HomeAddress">Home Address:</label>
+                    <input id="HomeAddress" class="form-control" name="HomeAddress" value="@Model.Record.HomeAddress" readonly />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="LicenceType">Licence Type</label>
+                    <input id="LicenceType" class="form-control" name="LicenceType" value="@Model.Record.LicenceType" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ProofOfRes">Proof Of Residence</label>
+                    <input id="ProofOfRes" class="form-control" name="ProofOfRes" value="@Model.Record.ProofOfRes" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="IDcopy">ID copy</label>
+                    <input id="IDcopy" class="form-control" name="IDcopy" value="@Model.Record.IDcopy" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="EyeTest">Eye Test</label>
+                    <input id="EyeTest" class="form-control" name="EyeTest" value="@Model.Record.EyeTest" readonly />
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-4 col-form-label">Status:</label>
+                    <div class="col-sm-8">
+                        <select id="Status" name="Status" asp-for="Record.Status" class="form-control">
+                            <option value="In Review" selected="@Model.Record.Status == " In Review"">In Review</option>
+                            <option value="Complete" selected="@Model.Record.Status == " Complete"">Complete</option>
+                            <option value="Rejected" selected="@Model.Record.Status == " Rejected"">Rejected</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div class="offset-sm-4 col-sm-4 d-grid">
+                        <button type="submit" asp-page="./Index" class="btn btn-primary">Save Changes</button>
+                        <button asp-page="./Index" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </section>
+    </div>
+
+</div>
